@@ -11,10 +11,6 @@ CSL files can be used by various bibliography software, eg. Zotero or Mandelay
 
 You need to have a bibliography and word processing software up and running.
 
-```
-Give examples
-```
-
 ### Installing
 
 Example for importing CSL to Zotero, using Word on Mac
@@ -33,10 +29,19 @@ Select Zotero in the menu bar -> Document Preferences -> Choose "NZR - Neue Ziti
 
 No feel free to cite away...
 
+## Special Literature
+
+* "Kommentarlitatur" should be added as "Enzyklopädieartikel" asset
+* "Beiträge in Sammelwerken": Add the main work as "Buch", then clone the entry, alter the title to the title of the contribution and mark it as "Buchteil"
+* "Zeitschriftenartikel" must have a page count
+
+## Known Issues
+
+* Nach den NZR2 sollten in der Bibliographie <Nachname> <Vorname> stehen, dies ist nur mit "," dazwischen möglich  
 
 ## Authors
 
-* **Günter Omer** - *Adapdation to NZR* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Günter Omer** - *Adapdation to NZR* - [Orikk](https://github.com/Orikk)
 
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
@@ -47,4 +52,4 @@ This project is licensed under the Creative Commons 4.0 License
 
 ## Acknowledgments
 
-* **Andreas Geyrecker** - *Initial work* - (andreas.geyrecker@lexisnexis.at)
+* **Andreas Geyrecker** - *Initial work* - (https://lexisnexis.at)
