@@ -114,7 +114,7 @@
 	</macro>
 	<macro name="biblio-editors">
 		<names variable="editor" font-style="italic">
-			<name delimiter="/"  form="long" name-as-sort-order="all" delimiter-precedes-last="always" />
+			<name delimiter="/" sort-separator=" " form="long" name-as-sort-order="all" delimiter-precedes-last="always" />
 			<et-al term="et-al" font-style="italic"/>
 		</names>
 		<text value=" (Hrsg)" font-style="normal"/>
