@@ -338,7 +338,7 @@
 										</if>
 										<else-if variable="note"><!-- Field named "Extra" in Zotero, leave "Auflage" empty -->
 											<!-- RIS workaround -->
-											<text variable="locator" />
+											<text variable="locator" prefix=" " />
 											<text variable="note" prefix=" (" suffix=")" />
 										</else-if>
 									</choose>
