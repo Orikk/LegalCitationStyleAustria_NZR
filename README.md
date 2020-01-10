@@ -31,9 +31,13 @@ No feel free to cite away...
 
 ## Special Literature
 
-* "Kommentarlitatur" should be added as "Enzyklopädieartikel" asset
+* "Kommentarlitatur": 
+  * Add the main work as "Book" (zB ABGB-ON), duplicate, add the "Autor" of the comment and make it a "Buchteil" asset
+  * leave "Title" blank, enter "Buchtitel", "Auflage", "Datum", "Kurztitel"
+  * Onlinekommentare: empty "Auflage", add full info to "Extra" (eg "Version 1.04 Stand 01.08.2019")
 * "Beiträge in Sammelwerken": Add the main work as "Buch", then clone the entry, alter the title to the title of the contribution and mark it as "Buchteil"
 * "Zeitschriftenartikel" must have a page count
+
 
 ## Known Issues
 

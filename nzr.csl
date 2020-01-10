@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="note" default-locale="de-AT">
 	<info>
-		<title>NRZ - Neue Zitierregeln (German - Austrian Legal)</title>
+		<title>NZR - Neue Zitierregeln (German - Austrian Legal)</title>
 		<id>http://www.zotero.org/styles/nzr-austria-legal</id>
 		<link href="http://tablegray.com/nzr" rel="documentation"/>
 		<author>
@@ -324,7 +324,7 @@
 								<if position="first">
 									<choose>
 										<if variable="editor">
-											<text macro="editors" prefix=" in " suffix=", "/>
+											<text macro="editors-encyclopedia" prefix=" in " suffix=", "/>
 										</if>
 										<else>
 											<text value=", "/>
@@ -336,20 +336,19 @@
 										<if variable="edition">
 											<text variable="edition" vertical-align="sup"/>
 										</if>
-										<else-if variable="note">
+										<else-if variable="note"><!-- Field named "Extra" in Zotero, dann Feld "Auflage" leer lassen -->
 											<!-- RIS workaround -->
-											<text variable="note" vertical-align="sup"/>
+											<text variable="note" prefix=" (" suffix=")" />
 										</else-if>
 									</choose>
-									<group delimiter=" " prefix=" (" suffix=") ">
-										<text variable="collection-title"/>
-										<date variable="issued">
-											<date-part name="year" form="long"/>
-										</date>
-									</group>
 								</if>
-								<else>
-									<text value=","/>
+								<else> <!-- subsequent -->
+									<text value=" "/>
+									<text value="in "/>
+									<text variable="container-title"/>
+									<if variable="edition">
+										<text variable="edition" vertical-align="sup"/>
+									</if>
 								</else>
 							</choose>
 							<text variable="title" prefix=" "/>
@@ -647,37 +646,30 @@
 					<choose>
 						<if variable="edition note" match="any">
 							<choose>
-								<if variable="edition">
+								<if variable="edition"> <!-- when no edition it is assumed to be an online commentary, eg ABGB-ON -->
 									<text variable="edition" vertical-align="sup"/>
 								</if>
 								<else-if variable="note">
 									<!-- RIS workaround -->
-									<text variable="note" vertical-align="sup"/>
+	 								<text variable="publisher" prefix=" (" />
+									<text variable="note" prefix=" "/>
+									<text value=")"/>
 								</else-if>
 							</choose>
 						</if>
 					</choose>
 					<choose>
-						<if variable="publisher">
-							<text variable="publisher" prefix=", "/>
+						<if variable="edition" match="any" >
+							<choose>
+								<if variable="publisher issued" match="any">
+									<text variable="publisher" prefix=" ("/>
+									<date variable="issued" prefix=" ">
+										<date-part name="year" form="long"/>
+									</date>
+									<text value=")"/>
+								</if>
+							</choose>
 						</if>
-					</choose>
-					<choose>
-						<if variable="publisher-place">
-							<text variable="publisher-place" prefix=", "/>
-						</if>
-					</choose>
-					<choose>
-						<if variable="publisher publisher-place" match="any">
-							<date variable="issued" prefix=" ">
-								<date-part name="year" form="long"/>
-							</date>
-						</if>
-						<else>
-							<date variable="issued" prefix=" (" suffix=")">
-								<date-part name="year" form="long"/>
-							</date>
-						</else>
 					</choose>
 				</else-if>
 				<else-if type="thesis">
