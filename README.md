@@ -31,7 +31,7 @@ No feel free to cite away...
 
 ## Special Literature
 
-* "Kommentarlitatur": 
+* "Kommentarlitatur": Important - leave "Seiten" empty, otherwise it is counted as "Beiträge in Sammelwerken"
   * Add the main work as "Book" (zB ABGB-ON), duplicate, add the "Autor" of the comment and make it a "Buchteil" asset
   * leave "Title" blank, enter "Buchtitel", "Auflage", "Datum", "Kurztitel"
   * Onlinekommentare: empty "Auflage", add full info to "Extra" (eg "Version 1.04 Stand 01.08.2019")
