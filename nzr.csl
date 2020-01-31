@@ -333,10 +333,16 @@
 									<text variable="container-title"/>
 									<text variable="volume" prefix=" "/>
 									<choose>
-										<if variable="edition">
+										<if variable="note edition" match="all">
+											<!-- RIS workaround -->
 											<text variable="edition" vertical-align="sup"/>
+											<text variable="locator" prefix=" " />
+											<text variable="note" prefix=" (Stand " suffix=")" />
 										</if>
-										<else-if variable="note"><!-- Field named "Extra" in Zotero, leave "Auflage" empty -->
+										<else-if variable="edition">
+											<text variable="edition" vertical-align="sup"/>
+										</else-if>
+										<else-if variable="note"><!-- Online comment with version number, field named "Extra" in Zotero, leave "Auflage" empty -->
 											<!-- RIS workaround -->
 											<text variable="locator" prefix=" " />
 											<text variable="note" prefix=" (" suffix=")" />
