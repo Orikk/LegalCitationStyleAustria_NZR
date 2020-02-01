@@ -341,6 +341,13 @@
 										</if>
 										<else-if variable="edition">
 											<text variable="edition" vertical-align="sup"/>
+											<text variable="locator" prefix=" " />
+											<group delimiter=" " prefix=" (" suffix=")">
+												<text variable="collection-title"/>
+												<date variable="issued">
+												<date-part name="year" form="long"/>
+												</date>
+											</group>
 										</else-if>
 										<else-if variable="note"><!-- Online comment with version number, field named "Extra" in Zotero, leave "Auflage" empty -->
 											<!-- RIS workaround -->
