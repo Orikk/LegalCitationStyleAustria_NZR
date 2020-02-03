@@ -359,7 +359,14 @@
 								<else> <!-- subsequent -->
 									<text value=" "/>
 									<text value="in "/>
-									<text variable="container-title"/>
+									<choose>
+										<if variable="title-short">
+											<text variable="title-short"/>
+										</if>
+										<else>
+											<text variable="container-title"/>
+										</else>
+									</choose>
 									<if variable="edition">
 										<text variable="edition" vertical-align="sup"/>
 									</if>
