@@ -31,13 +31,15 @@ No feel free to cite away...
 
 ## Special Literature
 
+* WICHTIG: "Kommentarliteratur" untrscheidet sich von "Beiträgen in Sammelwerken" durch die Seitenzahl, ist diese leer wird von einem Kommentar ausgegangen
+
 * "Kommentarlitatur": Wichtig - Das Feld "Seiten" leer lassen, sonst wird es als "Beiträge in Sammelwerken" betrachtet
   * Hauptwerk als "Book" (zB ABGB-ON) hinzufügen, duplizieren, Autor in "Autor" des Beitrages eintragen, Eintragsart "Buchteil" auswählen
   * "Titel" leer lassen, "Auflage", "Datum" und "Kurztitel" eintragen
   * Der letzte Stand kann in "Extra" eingetragen werden
   * Onlinekommentare: leere "Auflage", volle Information in "Extra" einfügen (zB "Version 1.04 Stand 01.08.2019")
   * §§ und Rz können als locator, also als Seitenangabe eingefügt werden
-* "Beiträge in Sammelwerken": Hauptwerk als "Buch" hinzufügen, dann Eintrag duplizieren, "Titel" des Abschnittes eintragen und Eintragsart auf "Buchteil" ändern
+* "Beiträge in Sammelwerken": Hauptwerk als "Buch" hinzufügen, dann Eintrag duplizieren, "Titel" des Abschnittes eintragen und Eintragsart auf "Buchteil" ändern 
 * "Zeitschriftenartikel" müssen eine "Anzahl der Seiten" haben
 
 

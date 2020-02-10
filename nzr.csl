@@ -174,19 +174,34 @@
 					<choose>
 						<if variable="container-title section" match="all">
 							<text variable="section" suffix=" "/>
-							<text variable="container-title"/>
 							<choose>
 								<if position="first">
 									<choose>
+										<text variable="container-title"/>
 										<if variable="references">
 											<text variable="references" prefix=" "/>
 										</if>
 									</choose>
 								</if>
+								<else>
+									<text variable="short-title"/>
+								</else>
 							</choose>
 						</if>
 						<else>
-							<text variable="title"/>
+							<choose>
+								<if position="first">
+									<choose>
+										<text variable="title"/>
+										<if variable="references">
+											<text variable="references" prefix=" "/>
+										</if>
+									</choose>
+								</if>
+								<else>
+									<text variable="title-short"/>
+								</else>
+							</choose>
 						</else>
 					</choose>
 				</else-if>				
