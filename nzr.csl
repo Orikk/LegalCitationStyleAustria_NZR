@@ -135,18 +135,24 @@
 			<choose>
 				<if type="legal_case">
 					<choose>
-						<if variable="authority issued number" match="all">
-							<text variable="authority" suffix=" "/>
-							<date variable="issued" suffix=" ">
-								<date-part name="day" form="numeric-leading-zeros" suffix="."/>
-								<date-part name="month" form="numeric-leading-zeros" suffix="."/>
-								<date-part name="year" form="long" suffix=","/>
-							</date>
-							<text variable="number"/>
+						<if position="first">
+							<text variable="title"/>
 						</if>
 						<else>
-							<!-- fallback: since RIS format does not have a court (authority) variable -->
-							<text variable="title"/>
+							<choose>
+								<if variable="authority issued number" match="all">
+									<text variable="authority" suffix=" "/>
+									<date variable="issued" suffix=" ">
+										<date-part name="day" form="numeric-leading-zeros" suffix="."/>
+										<date-part name="month" form="numeric-leading-zeros" suffix="."/>
+										<date-part name="year" form="long" suffix=","/>
+									</date>
+									<text variable="number"/>
+								</if>
+								<else>
+									<text variable="title"/>
+								</else>
+							</choose>
 						</else>
 					</choose>
 				</if>
@@ -528,7 +534,7 @@
 			<choose>
 				<if type="legal_case">
 					<choose>
-						<if variable="authority issued number" match="all">
+						<if variable="title" match="none">
 							<text variable="authority" suffix=" "/>
 							<date variable="issued" suffix=" ">
 								<date-part name="day" form="numeric-leading-zeros" suffix="."/>
@@ -538,8 +544,6 @@
 							<text variable="number"/>
 						</if>
 						<else>
-							<!-- fallback: since RIS format does not have a court (authority) variable -->
-							<text variable="title"/>
 							<text variable="title"/>
 						</else>
 					</choose>

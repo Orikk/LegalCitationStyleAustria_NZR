@@ -41,6 +41,7 @@ No feel free to cite away...
   * §§ und Rz können als locator, also als Seitenangabe eingefügt werden
 * "Beiträge in Sammelwerken": Hauptwerk als "Buch" hinzufügen, dann Eintrag duplizieren, "Titel" des Abschnittes eintragen und Eintragsart auf "Buchteil" ändern 
 * "Zeitschriftenartikel" müssen eine "Anzahl der Seiten" haben
+* Entscheidungen: Unter "Name des Falls" (Title) das Zitat inkl Glossen einfügen, Gericht, Beschlussdatum und Aktenzeichen für Folgezitat eintragen
 
 
 ## Known Issues
