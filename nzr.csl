@@ -135,7 +135,7 @@
 			<choose>
 				<if type="legal_case">
 					<choose>
-						<if position="first">
+						<if position="first title" match="all">
 							<text variable="title"/>
 						</if>
 						<else>
