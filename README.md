@@ -52,12 +52,11 @@ No feel free to cite away...
 * **Günter Omer** - *Adapdation to NZR* - [Orikk](https://github.com/Orikk)
 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the Creative Commons 4.0 License
 
 ## Acknowledgments
 
-* **Andreas Geyrecker** - *Initial work* - (https://lexisnexis.at)
+* **ao. Univ.-Prof. Dr. Dietmar Jahnel (Universität Salzburg)+* - *Author of NZR* - (https://www.ridaonline.at/zitiermaster/)
+* **Andreas Geyrecker** - *Initial work (based on AZR)* - (https://lexisnexis.at)
