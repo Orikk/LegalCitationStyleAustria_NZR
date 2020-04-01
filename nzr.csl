@@ -172,7 +172,7 @@
 							</choose>
 						</if>
 						<else>
-							<text variable="title"/>
+							<text variable="title-short"/>
 						</else>
 					</choose>
 				</else-if>
@@ -375,6 +375,16 @@
 											<text variable="locator" prefix=" " />
 											<text variable="note" prefix=" (" suffix=")" />
 										</else-if>
+										<else>
+											<text variable="edition" vertical-align="sup"/>
+											<group delimiter=" " prefix=" (" suffix=")">
+												<text variable="collection-title"/>
+												<date variable="issued">
+												<date-part name="year" form="long"/>
+												</date>
+											</group>
+											<text variable="locator" prefix=" " />
+										</else>
 									</choose>
 								</if>
 								<else> <!-- subsequent -->
