@@ -173,6 +173,7 @@
 						</if>
 						<else>
 							<text variable="title-short"/>
+
 						</else>
 					</choose>
 				</else-if>
@@ -210,6 +211,7 @@
 							</choose>
 						</else>
 					</choose>
+					<text variable="locator" prefix=" "/>
 				</else-if>				
 				<else-if type="article-journal">
 					<text macro="authors" suffix=", "/>
