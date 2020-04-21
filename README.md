@@ -21,13 +21,15 @@ First install to CSL to your intstallation of Zotero
 Zotero -> Settings -> Zitation -> "+" -> Choose the nzr.cls file downloaded
 ```
 
+** Irnore the warning, it is caused by the parameter words-affix-variables-on="true" on line 159 **
+
 Now choose the correct style in Word
 
 ```
 Select Zotero in the menu bar -> Document Preferences -> Choose "NZR - Neue Zitierregeln (German - Austrian Legal)
 ```
 
-No feel free to cite away...
+Now feel free to cite away...
 
 ## Special Literature
 
