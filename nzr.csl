@@ -765,8 +765,7 @@
 					</date>
 				</else-if>
 				<else-if type="webpage">
-					<text macro="biblio-authors"/>
-					<text value=", "/>
+					<text macro="biblio-authors" suffix=", "/>
 					<text variable="title" suffix=" " />
 					<text variable="URL" prefix="&lt;" suffix="&gt;"/>
 					<choose>
