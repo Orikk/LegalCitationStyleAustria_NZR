@@ -59,7 +59,33 @@
 			</substitute>
 		</names>
 	</macro>
-	<macro name="sort-key">
+	<macro name="sort-key-1">
+		<choose>
+			<if type="book">
+				<text value="1"/>
+			</if>
+			<else-if type="chapter">
+				<choose>
+					<if variable="page">
+						<text value="2"/>
+					</if>
+					<else>
+						<text value="3"/> <!-- commentary -->
+					</else>
+				</choose>
+			</else-if>
+			<else-if type="article-journal article-magazine" match="any">
+				<text value="4"/>
+			</else-if>
+			<else-if type="webpage">
+				<text value="5"/>
+			</else-if>
+			<else>
+				<text value="6"/>
+			</else>
+		</choose>	
+	</macro>
+	<macro name="sort-key-2">
 		<text macro="authority-sort"/>
 		<text macro="contributors-sort" suffix=" "/>
 	</macro>
@@ -103,7 +129,7 @@
 	<!-- macros for bibliography -->
 	<macro name="biblio-authors">
 		<names variable="author" font-style="italic">
-			<name delimiter="/" form="long" name-as-sort-order="all" delimiter-precedes-last="always" />
+			<name delimiter="/" sort-separator=" " form="long" name-as-sort-order="all" delimiter-precedes-last="always" />
 			<et-al term="et-al" font-style="italic"/>
 			<substitute>
 				<names variable="editor" font-style="italic"/>
@@ -135,7 +161,7 @@
 			<choose>
 				<if type="legal_case">
 					<choose>
-						<if position="first title" match="all">
+						<if position="first" variable="title" match="all">
 							<text variable="title"/>
 						</if>
 						<else>
@@ -183,23 +209,23 @@
 							<text variable="section" suffix=" "/>
 							<choose>
 								<if position="first">
+									<text variable="container-title"/>
 									<choose>
-										<text variable="container-title"/>
 										<if variable="references">
 											<text variable="references" prefix=" "/>
 										</if>
 									</choose>
 								</if>
 								<else>
-									<text variable="short-title"/>
+									<text variable="title-short"/>
 								</else>
 							</choose>
 						</if>
 						<else>
 							<choose>
 								<if position="first">
+									<text variable="title"/>
 									<choose>
-										<text variable="title"/>
 										<if variable="references">
 											<text variable="references" prefix=" "/>
 										</if>
@@ -229,7 +255,9 @@
 							<text variable="page"/>
 							<text variable="locator" prefix=" (" suffix=")"/>
 						</if>
-						<if variable="page" match="all">
+					</choose>
+					<choose>
+						<if variable="page">
 							<text variable="container-title" suffix=", "/>
 							<text variable="page"/>
 							<text variable="locator" prefix=" (" suffix=")"/>
@@ -400,9 +428,11 @@
 											<text variable="container-title"/>
 										</else>
 									</choose>
-									<if variable="edition">
-										<text variable="edition" vertical-align="sup"/>
-									</if>
+									<choose>
+										<if variable="edition">
+											<text variable="edition" vertical-align="sup"/>
+										</if>
+									</choose>
 								</else>
 							</choose>
 							<text variable="title" prefix=" "/>
@@ -539,7 +569,8 @@
 	
 	<bibliography subsequent-author-substitute="——" hanging-indent="true" entry-spacing="1">
 		<sort>
-			<key macro="sort-key"/>
+			<key macro="sort-key-1"/>
+			<key macro="sort-key-2"/>
 			<key variable="issued" sort="ascending"/>
 		</sort>
 		<layout>
