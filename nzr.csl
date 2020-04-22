@@ -775,8 +775,8 @@
 					</choose>
 				</else-if>
 				<else>
-					<text macro="authors" font-style="italic"/>
-					<text variable="title" prefix=", "/>
+					<text macro="authors" suffix=", " font-style="italic"/>
+					<text variable="title"/>
 					<choose>
 						<if variable="container-title">
 							<text variable="container-title" prefix=", "/>
