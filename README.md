@@ -46,8 +46,9 @@ Now feel free to cite away...
 * Entscheidungen: Unter "Name des Falls" (Title) das Zitat inkl Glossen einfügen, Gericht, Beschlussdatum und Aktenzeichen für Folgezitat eintragen
 
 
-## Known Issues
+## Abweichungen von den NZR2
 
+* Für Webseiten wird, soweit verfügbar, anstatt des Abrufzeitpunktes das Jahr des Dokumentes angegeben
 
 ## Authors
 

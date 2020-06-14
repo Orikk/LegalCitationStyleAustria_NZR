@@ -486,8 +486,10 @@
 					<choose>
 						<if position="first">
 							<choose>
-								<if variable="accessed">
-									<date variable="accessed" prefix=" (" suffix=")" form="numeric"/>
+								<if variable="issued">
+									<date variable="issued" prefix=" (" suffix=")">
+										<date-part name="year" form="long"/>
+									</date>
 								</if>
 							</choose>
 						</if>
@@ -769,9 +771,9 @@
 					<text variable="title" suffix=" " />
 					<text variable="URL" prefix="&lt;" suffix="&gt;"/>
 					<choose>
-						<if variable="accessed">
-							<date variable="accessed" prefix=" (" suffix=")" form="numeric"/>
-						</if>
+						<date variable="issued" prefix=" (" suffix=")">
+								<date-part name="year" form="long"/>
+						</date>
 					</choose>
 				</else-if>
 				<else>
