@@ -255,13 +255,11 @@
 							<text variable="page"/>
 							<text variable="locator" prefix=" (" suffix=")"/>
 						</if>
-					</choose>
-					<choose>
-						<if variable="page">
+						<else-if variable="page">
 							<text variable="container-title" suffix=", "/>
 							<text variable="page"/>
 							<text variable="locator" prefix=" (" suffix=")"/>
-						</if>
+						</else-if>
 						<else>
 							<text variable="container-title"/>
 							<!-- if no page info is available, assume container-title (publication) holds article number citation -->
