@@ -276,28 +276,41 @@
 							<text macro="authors" suffix=", "/>
 						</else>
 					</choose>
-					<text variable="title"/>
-					<text variable="volume" prefix=" "/>
 					<choose>
-						<if variable="edition note" match="any">
+						<if position="first" match="none">
+							<text variable="title-short" prefix=" "/>
 							<choose>
 								<if variable="edition">
 									<text variable="edition" vertical-align="sup"/>
 								</if>
-								<else-if variable="note">
-									<!-- RIS workaround -->
-									<text variable="note" vertical-align="sup"/>
-								</else-if>
 							</choose>
+							<text variable="locator" prefix=", "/>
 						</if>
+						<else>
+							<text variable="title"/>
+							<text variable="volume" prefix=" "/>
+							<choose>
+								<if variable="edition note" match="any">
+									<choose>
+										<if variable="edition">
+											<text variable="edition" vertical-align="sup"/>
+										</if>
+										<else-if variable="note">
+											<!-- RIS workaround -->
+											<text variable="note" vertical-align="sup"/>
+										</else-if>
+									</choose>
+								</if>
+							</choose>
+							<group delimiter=" " prefix=" (" suffix=")">
+								<text variable="collection-title"/>
+								<date variable="issued">
+									<date-part name="year" form="long"/>
+								</date>
+							</group>
+							<text variable="locator" prefix=" "/>
+						</else>
 					</choose>
-					<group delimiter=" " prefix=" (" suffix=")">
-						<text variable="collection-title"/>
-						<date variable="issued">
-							<date-part name="year" form="long"/>
-						</date>
-					</group>
-					<text variable="locator" prefix=" "/>
 				</else-if>
 				<else-if type="chapter">
 					<text macro="authors" font-style="italic"/>
