@@ -278,7 +278,14 @@
 					</choose>
 					<choose>
 						<if position="first" match="none">
-							<text variable="title-short" prefix=" "/>
+							<choose>
+								<if variable="title-short">
+									<text variable="title-short" prefix=" "/>
+								</if>
+								<else>
+									<text variable="title"/>
+								</else>
+							</choose>
 							<choose>
 								<if variable="edition">
 									<text variable="edition" vertical-align="sup"/>
