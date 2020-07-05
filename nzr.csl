@@ -773,6 +773,13 @@
 								</if>
 							</choose>
 						</if>
+						<else>
+							<text variable="publisher" prefix=" ("/>
+							<date variable="issued" prefix=" ">
+								<date-part name="year" form="long"/>
+							</date>
+							<text value=")"/>
+						</else>
 					</choose>
 				</else-if>
 				<else-if type="thesis">
