@@ -263,6 +263,9 @@
 						<else>
 							<text variable="container-title"/>
 							<!-- if no page info is available, assume container-title (publication) holds article number citation -->
+							<date variable="issued" prefix="(" suffix=")">
+								<date-part name="year" form="long"/>
+							</date>
 							<text variable="locator" prefix=", "/>
 						</else>
 					</choose>
@@ -591,6 +594,7 @@
 		<sort>
 			<key macro="sort-key-1"/>
 			<key macro="sort-key-2"/>
+			<key variable="title" sort="ascending"/>
 			<key variable="issued" sort="ascending"/>
 		</sort>
 		<layout>
@@ -627,10 +631,19 @@
 								<date-part name="year" form="long"/>
 							</date>
 							<text variable="page"/>
+							<text variable="locator" prefix=" (" suffix=")"/>
 						</if>
+						<else-if variable="page">
+							<text variable="container-title" suffix=", "/>
+							<text variable="page"/>
+							<text variable="locator" prefix=" (" suffix=")"/>
+						</else-if>
 						<else>
+							<text variable="container-title"/>
 							<!-- if no page info is available, assume container-title (publication) holds article number citation -->
-							<text variable="container-title" suffix=" "/>
+							<date variable="issued">
+								<date-part name="year" form="long"/>
+							</date>
 						</else>
 					</choose>
 				</else-if>
