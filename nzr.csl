@@ -641,9 +641,10 @@
 						<else>
 							<text variable="container-title"/>
 							<!-- if no page info is available, assume container-title (publication) holds article number citation -->
-							<date variable="issued">
+							<date variable="issued" prefix=", ">
 								<date-part name="year" form="long"/>
 							</date>
+							<text variable="locator" prefix=", "/>
 						</else>
 					</choose>
 				</else-if>
@@ -787,8 +788,9 @@
 							</choose>
 						</if>
 						<else>
-							<text variable="publisher" prefix=" ("/>
-							<date variable="issued" prefix=" ">
+							<text value=" ("/>
+							<text variable="publisher" suffix=" "/>
+							<date variable="issued">
 								<date-part name="year" form="long"/>
 							</date>
 							<text value=")"/>
